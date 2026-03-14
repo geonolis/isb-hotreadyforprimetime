@@ -17,16 +17,18 @@
 
     /* ── Colour tokens ──────────────────────────────────────────────────── */
     :root {
-      --blue-dark:  #0d3f6e;
-      --blue-mid:   #1a6faf;
-      --blue-light: #e8f0fb;
-      --amber:      #f5a623;
-      --green:      #3aaa6a;
-      --text:       #1a1a2e;
-      --muted:      #5a6070;
-      --card-bg:    #ffffff;
-      --border:     #dce3f0;
-      --radius:     10px;
+      --green-dark:   #1a5c2e;
+      --green-mid:    #3a9e5f;
+      --green-light:  #a8dbb5;
+      --blue-dark:    #0d3f6e;
+      --blue-mid:     #1a6faf;
+      --blue-light:   #e8f0fb;
+      --amber:        #f5a623;
+      --text:         #1a1a2e;
+      --muted:        #5a6070;
+      --card-bg:      #ffffff;
+      --border:       #dce3f0;
+      --radius:       10px;
     }
 
     /* ── Header ─────────────────────────────────────────────────────────── */
@@ -200,7 +202,7 @@
       padding: 1.8rem 1.6rem;
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
+      gap: 1.5rem;
     }
     .text-panel h3 {
       font-size: 0.72rem;
@@ -215,17 +217,10 @@
       color: var(--text);
       line-height: 1.7;
     }
-    .text-panel .desc-block, .text-panel .concl-block {
+    .text-panel .desc-block {
       border-left: 3px solid var(--border);
       padding-left: 0.9rem;
     }
-    .text-panel .concl-block {
-      border-left-color: var(--blue-mid);
-      background: var(--blue-light);
-      border-radius: 0 6px 6px 0;
-      padding: 0.8rem 0.9rem;
-    }
-    .text-panel .concl-block h3 { color: var(--blue-dark); }
 
     /* Key finding pills */
     .findings {
@@ -247,9 +242,9 @@
       flex-shrink: 0;
       margin-top: 0.45rem;
     }
-    .dot-blue   { background: var(--blue-mid); }
-    .dot-amber  { background: var(--amber); }
-    .dot-green  { background: var(--green); }
+    .dot-green-dark  { background: var(--green-dark); }
+    .dot-green-mid   { background: var(--green-mid); }
+    .dot-green-light { background: var(--green-light); }
 
     /* Data table inside text panel */
     .mini-table {
@@ -297,11 +292,11 @@
     across organs, years, and manuscript use-cases.
   </p>
   <div class="stats-strip">
-    <div class="stat"><span class="num">33</span><span class="lbl">Included studies</span></div>
-    <div class="stat"><span class="num">13</span><span class="lbl">Core studies</span></div>
-    <div class="stat"><span class="num">5</span><span class="lbl">Organs covered</span></div>
+    <div class="stat"><span class="num">31</span><span class="lbl">Included studies</span></div>
+    <div class="stat"><span class="num">11</span><span class="lbl">Core studies</span></div>
+    <div class="stat"><span class="num">4</span><span class="lbl">Organs covered</span></div>
     <div class="stat"><span class="num">2020–2026</span><span class="lbl">Publication window</span></div>
-    <div class="stat"><span class="num">6</span><span class="lbl">Visualisations</span></div>
+    <div class="stat"><span class="num">4</span><span class="lbl">Visualisations</span></div>
   </div>
 </header>
 
@@ -310,7 +305,7 @@
 ══════════════════════════════════════════════════════════════════════════ -->
 <nav>
   <a href="#chart1">1 · Evidence Map</a>
-  <a href="#chart2">2 · Evidence Architecture</a>
+  <a href="#chart2">2 · Role in Review</a>
   <a href="#chart4">3 · Core Readiness</a>
   <a href="#chart6">4 · Study Design</a>
 </nav>
@@ -337,26 +332,17 @@
           <p>
             Each bubble represents one included study, positioned by publication year (x-axis)
             and organ (y-axis). Bubble colour encodes the study's role in the review:
-            <strong style="color:#1a6faf">blue = Core</strong>,
-            <strong style="color:#f5a623">amber = Support citation</strong>,
-            <strong style="color:#6aaa6a">green = Discussion only</strong>.
-            All bubbles are uniform in size so that colour is the sole visual variable.
-            Hover over any bubble to see the first author, organ, sample size, and title.
+            <strong style="color:var(--green-dark)">dark green = Core</strong>,
+            <strong style="color:var(--green-mid)">medium green = Support citation</strong>,
+            <strong style="color:var(--green-light)">pale green = Discussion only</strong>.
+            Overlapping bubbles are spread vertically for clarity.
           </p>
         </div>
         <div class="findings">
-          <div class="finding"><span class="dot dot-blue"></span><span><strong>Kidney dominates</strong> — 25 of 33 included studies (76%) are kidney-only, spanning the full 2020–2026 window.</span></div>
-          <div class="finding"><span class="dot dot-amber"></span><span><strong>Cross-organ papers are emerging</strong> — Heart, Uterus, Kidney &amp; Placenta, and Solid Organ entries all appear from 2023 onwards.</span></div>
-          <div class="finding"><span class="dot dot-green"></span><span><strong>Core studies cluster in 2022–2025</strong>, with the most recent Core addition being the Heart study (Giarraputo 2026).</span></div>
-        </div>
-        <div class="concl-block">
-          <h3>Conclusion</h3>
-          <p>
-            The evidence base is temporally mature for kidney and nascent for all other organs.
-            The 2023–2026 emergence of non-kidney Core and Support studies signals a field in
-            active expansion, but the density asymmetry justifies a kidney-first framing of
-            clinical readiness.
-          </p>
+          <h3>Key Findings</h3>
+          <div class="finding"><span class="dot dot-green-dark"></span><span><strong>Kidney dominates</strong> — 25 of 31 included studies (81%) are kidney-only, spanning the full 2020–2026 window.</span></div>
+          <div class="finding"><span class="dot dot-green-mid"></span><span><strong>Cross-organ papers are emerging</strong> — Heart, Uterus, and Kidney &amp; Placenta entries all appear from 2023 onwards.</span></div>
+          <div class="finding"><span class="dot dot-green-light"></span><span><strong>Core studies cluster in 2022–2025</strong>, with the most recent Core addition being the Heart study (Giarraputo 2026).</span></div>
         </div>
       </div>
     </div>
@@ -366,7 +352,7 @@
   <section class="chart-section" id="chart2">
     <div class="section-header">
       <div class="section-number">2</div>
-      <h2>Distribution by Primary Manuscript Use-Case</h2>
+      <h2>Role in Review — Core · Supporting Citation · Discussion Only</h2>
       <span class="purpose-tag">Evidence architecture</span>
     </div>
     <div class="chart-body">
@@ -377,10 +363,10 @@
         <div class="desc-block">
           <h3>Description</h3>
           <p>
-            A stacked horizontal bar chart showing how the 33 included studies distribute
+            A stacked horizontal bar chart showing how the 31 included studies distribute
             across the six primary manuscript sections. Each bar is subdivided by role in
-            review (Core / Support citation / Discussion only), giving an immediate map of
-            the evidence architecture.
+            review, giving an immediate map of the evidence architecture. The legend order
+            and colour scheme (dark/medium/pale green) match the evidence map.
           </p>
         </div>
         <table class="mini-table">
@@ -388,33 +374,21 @@
           <tbody>
             <tr><td>Foundational / Rationale</td><td>2</td><td>0</td><td>0</td><td><strong>2</strong></td></tr>
             <tr><td>Core kidney readiness</td><td>7</td><td>2</td><td>0</td><td><strong>9</strong></td></tr>
-            <tr><td>Cross-organ / cross-context</td><td>2</td><td>2</td><td>2</td><td><strong>6</strong></td></tr>
+            <tr><td>Cross-organ / cross-context</td><td>1</td><td>2</td><td>2</td><td><strong>5</strong></td></tr>
             <tr><td>Bridge to next-gen</td><td>0</td><td>2</td><td>0</td><td><strong>2</strong></td></tr>
-            <tr><td>Challenges / Limitations</td><td>2</td><td>3</td><td>2</td><td><strong>7</strong></td></tr>
+            <tr><td>Challenges / Limitations</td><td>1</td><td>3</td><td>2</td><td><strong>6</strong></td></tr>
             <tr><td>Background / Commentary</td><td>0</td><td>0</td><td>5</td><td><strong>5</strong></td></tr>
           </tbody>
         </table>
-        <div class="concl-block">
-          <h3>Conclusion</h3>
-          <p>
-            <strong>Core kidney readiness</strong> (n=9, almost entirely blue) is the
-            evidentiary backbone. <strong>Challenges / Limitations</strong> (n=7) is
-            predominantly amber, showing that limitations are acknowledged through secondary
-            evidence. <strong>Background / Commentary</strong> (n=5) is entirely green —
-            contextual framing only. The mixed colour profile of
-            <strong>Cross-organ / cross-context</strong> reflects its position as an
-            emerging, multi-tier area.
-          </p>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Chart 4: Lollipop ──────────────────────────────────────────────── -->
+  <!-- ── Chart 3: Lollipop ──────────────────────────────────────────────── -->
   <section class="chart-section" id="chart4">
     <div class="section-header">
       <div class="section-number">3</div>
-      <h2>Core Readiness Studies Ranked by Sample Size</h2>
+      <h2>Core Readiness Studies &amp; Sample Size</h2>
       <span class="purpose-tag">Statistical weight</span>
     </div>
     <div class="chart-body">
@@ -425,48 +399,36 @@
         <div class="desc-block">
           <h3>Description</h3>
           <p>
-            A lollipop plot of all 13 Core studies, ranked by primary sample size (N biopsies
-            or cases). Bar and dot colour encodes organ:
+            A lollipop plot of all 11 Core studies, sorted chronologically (newest first).
+            The x-axis shows the primary sample size (N biopsies analyzed with B-HOT), with
+            the exact number labelled next to each dot. Dot colour encodes organ:
             <strong style="color:#1a6faf">blue = Kidney</strong>,
             <strong style="color:#e05c2a">orange = Heart</strong>,
-            <strong style="color:#2aaa8a">green = Uterus</strong>,
-            <strong style="color:#8e5ea2">purple = Solid Organ</strong>.
-            Studies with no reported N are shown as a diamond at the origin.
+            <strong style="color:#e91e8c">pink = Uterus</strong>.
           </p>
         </div>
         <table class="mini-table">
           <thead><tr><th>Study</th><th>Organ</th><th>N</th></tr></thead>
           <tbody>
-            <tr><td>Zhang 2024</td><td>Kidney</td><td>1,395</td></tr>
-            <tr><td>Zielinski 2025</td><td>Kidney</td><td>950</td></tr>
             <tr><td>Giarraputo 2026</td><td>Heart</td><td>671</td></tr>
-            <tr><td>Beadle 2023</td><td>Kidney</td><td>349</td></tr>
-            <tr><td>Smith 2023</td><td>Kidney</td><td>326</td></tr>
-            <tr><td>Rosales 2022</td><td>Kidney</td><td>326</td></tr>
+            <tr><td>Zielinski 2025</td><td>Kidney</td><td>950</td></tr>
             <tr><td>Callemeyn 2025</td><td>Kidney</td><td>146</td></tr>
+            <tr><td>Eder 2025</td><td>Kidney</td><td>25</td></tr>
             <tr><td>Broecker 2025</td><td>Uterus</td><td>99</td></tr>
-            <tr><td>Varol 2023</td><td>Kidney</td><td>96</td></tr>
+            <tr><td>Zhang 2024</td><td>Kidney</td><td>1,395</td></tr>
             <tr><td>Buxeda 2024</td><td>Kidney</td><td>92</td></tr>
             <tr><td>Cristoferi 2024</td><td>Kidney</td><td>36</td></tr>
-            <tr><td>Eder 1 2025</td><td>Kidney</td><td>25</td></tr>
-            <tr><td>Mengel 2020</td><td>Solid Organ</td><td>N/A</td></tr>
+            <tr><td>Beadle 2023</td><td>Kidney</td><td>349</td></tr>
+            <tr><td>Smith 2023</td><td>Kidney</td><td>326</td></tr>
+            <tr><td>Varol 2023</td><td>Kidney</td><td>96</td></tr>
+            <tr><td>Rosales 2022</td><td>Kidney</td><td>326</td></tr>
           </tbody>
         </table>
-        <div class="concl-block">
-          <h3>Conclusion</h3>
-          <p>
-            Zhang, Zielinski, and Giarraputo 2026 carry the most statistical weight — together
-            accounting for over 3,000 biopsies. Giarraputo 2026 (Heart, n=671) is the third
-            largest Core study overall, making the cross-organ "prime time" argument visually
-            concrete. The 9:1:1 kidney-to-heart-to-uterus split reinforces the kidney-first
-            readiness narrative.
-          </p>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Chart 6: Design Heatmap ────────────────────────────────────────── -->
+  <!-- ── Chart 4: Design Heatmap ────────────────────────────────────────── -->
   <section class="chart-section" id="chart6">
     <div class="section-header">
       <div class="section-number">4</div>
@@ -484,7 +446,7 @@
             A heatmap with Organ on the y-axis and Study Design category on the x-axis.
             Cell colour intensity is proportional to the number of studies in that cell;
             white cells indicate no studies. Row and column totals are shown as marginal
-            annotations. Hover over any cell to see the individual study list.
+            annotations.
           </p>
           <p style="margin-top:0.6rem; font-size:0.82rem; color:var(--muted);">
             Design categories were derived from Document Type, Original Research flag,
@@ -492,19 +454,10 @@
           </p>
         </div>
         <div class="findings">
-          <div class="finding"><span class="dot dot-blue"></span><span><strong>Kidney × Retrospective cohort (FFPE)</strong> (n=9) and <strong>Kidney × Prospective / mixed cohort</strong> (n=6) are the two darkest cells — the core evidentiary mass.</span></div>
-          <div class="finding"><span class="dot dot-amber"></span><span><strong>Kidney</strong> is the only organ represented across all 6 design categories, confirming its methodological maturity.</span></div>
-          <div class="finding"><span class="dot dot-green"></span><span><strong>Heart, Uterus, Kidney &amp; Placenta, and Solid Organ</strong> each occupy only 1–2 design cells, highlighting the design-diversity gap.</span></div>
-        </div>
-        <div class="concl-block">
-          <h3>Conclusion</h3>
-          <p>
-            The design heatmap reveals that kidney's readiness advantage is not only about
-            study count but also about methodological breadth — it has been tested
-            prospectively, retrospectively (FFPE and non-FFPE), computationally, and in
-            case series. Non-kidney organs are confined to a single design type each,
-            which limits the generalisability of their findings at this stage.
-          </p>
+          <h3>Key Findings</h3>
+          <div class="finding"><span class="dot dot-green-dark"></span><span><strong>Kidney × Retrospective cohort (FFPE)</strong> (n=9) and <strong>Kidney × Prospective / mixed cohort</strong> (n=6) are the two darkest cells — the core evidentiary mass.</span></div>
+          <div class="finding"><span class="dot dot-green-mid"></span><span><strong>Kidney</strong> is the only organ represented across all 6 design categories, confirming its methodological maturity.</span></div>
+          <div class="finding"><span class="dot dot-green-light"></span><span><strong>Heart and Uterus</strong> each occupy only 1–2 design cells, highlighting the design-diversity gap.</span></div>
         </div>
       </div>
     </div>
@@ -517,7 +470,7 @@
 ══════════════════════════════════════════════════════════════════════════ -->
 <footer>
   <p>B-HOT Evidence Dashboard · Data source: Full-Deduplicatedlocal3.3.xlsx · Generated March 2026</p>
-  <p style="margin-top:0.3rem;">33 included studies · Filters: Use ≠ "Exclude from text" · N from Sample Size Helper column</p>
+  <p style="margin-top:0.3rem;">31 included studies · Filters: Use ≠ "Exclude from text" · N from Sample Size Helper column</p>
 </footer>
 
 <script>
