@@ -307,7 +307,7 @@
   <a href="#chart1">1 · Evidence Map</a>
   <a href="#chart2">2 · Role in Review</a>
   <a href="#chart4">3 · Core Readiness</a>
-  <a href="#chart6">4 · Study Design</a>
+  <a href="#chart6">4 · Evidence Landscape</a>
 </nav>
 
 <!-- ══════════════════════════════════════════════════════════════════════════
@@ -432,8 +432,8 @@
   <section class="chart-section" id="chart6">
     <div class="section-header">
       <div class="section-number">4</div>
-      <h2>Study Design Heatmap</h2>
-      <span class="purpose-tag">Methodological diversity</span>
+      <h2>B-HOT Evidence Landscape</h2>
+      <span class="purpose-tag">Evidence maturity &amp; translation stage</span>
     </div>
     <div class="chart-body">
       <div class="chart-panel">
@@ -443,21 +443,27 @@
         <div class="desc-block">
           <h3>Description</h3>
           <p>
-            A heatmap with Organ on the y-axis and Study Design category on the x-axis.
-            Cell colour intensity is proportional to the number of studies in that cell;
-            white cells indicate no studies. Row and column totals are shown as marginal
-            annotations.
+            Each cell shows the count of included studies at the intersection of a transplant
+            organ context (rows) and a study characteristic tag (columns). Colour intensity
+            scales with count — darker green = more studies. Hover over any cell to see the
+            individual studies it contains.
           </p>
           <p style="margin-top:0.6rem; font-size:0.82rem; color:var(--muted);">
-            Design categories were derived from Document Type, Original Research flag,
-            Retro/Prospective flags, Archival FFPE flag, and Method free-text.
+            <strong>Column tags:</strong> <em>BHOT</em> — study runs the B-HOT/BHOTX NanoString assay directly;
+            <em>COMP</em> — B-HOT genes used as reference in another assay;
+            <em>RET</em> — retrospective archival cohort;
+            <em>MC</em> — multicenter design supporting transportability;
+            <em>CLS</em> — classifier or clinical implementation work;
+            <em>MECH</em> — mechanistic immunobiology;
+            <em>MULTI</em> — multimodal profiling (mIF, spatial, IHC).
           </p>
         </div>
         <div class="findings">
           <h3>Key Findings</h3>
-          <div class="finding"><span class="dot dot-green-dark"></span><span><strong>Kidney × Retrospective cohort (FFPE)</strong> (n=9) and <strong>Kidney × Prospective / mixed cohort</strong> (n=6) are the two darkest cells — the core evidentiary mass.</span></div>
-          <div class="finding"><span class="dot dot-green-mid"></span><span><strong>Kidney</strong> is the only organ represented across all 6 design categories, confirming its methodological maturity.</span></div>
-          <div class="finding"><span class="dot dot-green-light"></span><span><strong>Heart and Uterus</strong> each occupy only 1–2 design cells, highlighting the design-diversity gap.</span></div>
+          <div class="finding"><span class="dot dot-green-dark"></span><span><strong>Kidney transplantation dominates</strong> every column — 14 direct B-HOT studies and 16 retrospective cohorts confirm it as the primary evidence base.</span></div>
+          <div class="finding"><span class="dot dot-green-mid"></span><span><strong>Multicenter and classifier studies</strong> (MC n=5, CLS n=4) are concentrated in kidney, representing the emerging clinical implementation frontier.</span></div>
+          <div class="finding"><span class="dot dot-green-light"></span><span><strong>Cross-organ rows shift rightward</strong> — Xenotransplantation and Placenta analogue show higher MECH and MULTI counts relative to their total, reflecting their exploratory, mechanistic character.</span></div>
+          <div class="finding"><span class="dot dot-green-light"></span><span><strong>Heart transplantation</strong> has 1 direct B-HOT, 1 multicenter, and 1 classifier study — a nascent but structured evidence base compared to the exploratory non-kidney contexts.</span></div>
         </div>
       </div>
     </div>
@@ -469,8 +475,8 @@
      FOOTER
 ══════════════════════════════════════════════════════════════════════════ -->
 <footer>
-  <p>B-HOT Evidence Dashboard · Data source: Full-Deduplicatedlocal3.3.xlsx · Generated March 2026</p>
-  <p style="margin-top:0.3rem;">31 included studies · Filters: Use ≠ "Exclude from text" · N from Sample Size Helper column</p>
+  <p>B-HOT Evidence Dashboard · Data sources: Full-Deduplicatedlocal3.3.xlsx &amp; Full-Deduplicatedlocal14.3.xlsx · Generated March 2026</p>
+  <p style="margin-top:0.3rem;">31 included studies · Filters: Use ≠ "Exclude from text" · Chart 4 uses Table 1 tags from 14.3 file</p>
 </footer>
 
 <script>
