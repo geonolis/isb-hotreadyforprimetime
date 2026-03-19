@@ -304,9 +304,8 @@
 ══════════════════════════════════════════════════════════════════════════ -->
 <nav>
   <a href="#chart1">1 · Evidence Map</a>
-  <a href="#chart2">2 · Role in Review</a>
-  <a href="#chart4">3 · Core Readiness</a>
-  <a href="#chart6">4 · Evidence Landscape</a>
+  <a href="#chart4">2 · Core Readiness</a>
+  <a href="#chart6">3 · Evidence Landscape</a>
 </nav>
 
 <!-- ══════════════════════════════════════════════════════════════════════════
@@ -318,7 +317,7 @@
   <section class="chart-section" id="chart1">
     <div class="section-header">
       <div class="section-number">1</div>
-      <h2>Evidence Map by Year, Organ &amp; Role in Review</h2>
+      <h2>B-HOT Evidence Map</h2>
       <span class="purpose-tag">Landscape overview</span>
     </div>
     <div class="chart-body">
@@ -329,12 +328,17 @@
         <div class="desc-block">
           <h3>Description</h3>
           <p>
-            Each bubble represents one included study, positioned by publication year (x-axis)
-            and organ (y-axis). Bubble colour encodes the study's role in the review:
-            <strong style="color:var(--green-dark)">dark green = Core</strong>,
-            <strong style="color:var(--green-mid)">medium green = Support citation</strong>,
-            <strong style="color:var(--green-light)">pale green = Discussion only</strong>.
-            Overlapping bubbles are spread vertically for clarity.
+            Each bubble represents one included study, positioned by <strong>publication year</strong> (x-axis)
+            and <strong>study design category</strong> (y-axis). Bubble colour encodes the transplant organ:
+            <strong style="color:#8EBAE6">blue = Kidney</strong>,
+            <strong style="color:#FFABAB">red = Heart</strong>,
+            <strong style="color:#c8a800">yellow = Other</strong>.
+            Bubble size is proportional to sample size (N biopsies); studies with no reported N
+            are shown as fixed-size diamonds. Hover over any bubble to see study details.
+          </p>
+          <p style="margin-top:0.6rem; font-size:0.82rem; color:var(--muted);">
+            <strong>Design categories (y-axis):</strong> Multicenter · Classifier · Retrospective ·
+            Comparative · Biomarker · In silico · Mechanistic.
           </p>
         </div>
 
@@ -342,46 +346,12 @@
     </div>
   </section>
 
-  <!-- ── Chart 2: Stacked Bar ───────────────────────────────────────────── -->
-  <section class="chart-section" id="chart2">
-    <div class="section-header">
-      <div class="section-number">2</div>
-      <h2>Role in Review — Core · Supporting Citation · Discussion Only</h2>
-      <span class="purpose-tag">Evidence architecture</span>
-    </div>
-    <div class="chart-body">
-      <div class="chart-panel">
-        <iframe src="charts/bhot_stacked_bar.html" title="Stacked horizontal bar chart"></iframe>
-      </div>
-      <div class="text-panel">
-        <div class="desc-block">
-          <h3>Description</h3>
-          <p>
-            A stacked horizontal bar chart showing how the 31 included studies distribute
-            across the six primary manuscript sections. Each bar is subdivided by role in
-            review, giving an immediate map of the evidence architecture. The legend order
-            and colour scheme (dark/medium/pale green) match the evidence map.
-          </p>
-        </div>
-        <table class="mini-table">
-          <thead><tr><th>Section</th><th>Core</th><th>Support</th><th>Disc.</th><th>n</th></tr></thead>
-          <tbody>
-            <tr><td>Foundational / Rationale</td><td>2</td><td>0</td><td>0</td><td><strong>2</strong></td></tr>
-            <tr><td>Core kidney readiness</td><td>7</td><td>2</td><td>0</td><td><strong>9</strong></td></tr>
-            <tr><td>Cross-organ / cross-context</td><td>1</td><td>2</td><td>2</td><td><strong>5</strong></td></tr>
-            <tr><td>Bridge to next-gen</td><td>0</td><td>2</td><td>0</td><td><strong>2</strong></td></tr>
-            <tr><td>Challenges / Limitations</td><td>1</td><td>3</td><td>2</td><td><strong>6</strong></td></tr>
-            <tr><td>Background / Commentary</td><td>0</td><td>0</td><td>5</td><td><strong>5</strong></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
 
-  <!-- ── Chart 3: Lollipop ──────────────────────────────────────────────── -->
+
+  <!-- ── Chart 2: Lollipop ──────────────────────────────────────────────── -->
   <section class="chart-section" id="chart4">
     <div class="section-header">
-      <div class="section-number">3</div>
+      <div class="section-number">2</div>
       <h2>Core Readiness Studies &amp; Sample Size</h2>
       <span class="purpose-tag">Statistical weight</span>
     </div>
@@ -393,12 +363,13 @@
         <div class="desc-block">
           <h3>Description</h3>
           <p>
-            A lollipop plot of all 11 Core studies, sorted chronologically (newest first).
+            A lollipop plot of all included studies ranked chronologically (newest first).
             The x-axis shows the primary sample size (N biopsies analyzed with B-HOT), with
             the exact number labelled next to each dot. Dot colour encodes organ:
-            <strong style="color:#1a6faf">blue = Kidney</strong>,
-            <strong style="color:#e05c2a">orange = Heart</strong>,
-            <strong style="color:#e91e8c">pink = Uterus</strong>.
+            <strong style="color:#8EBAE6">blue = Kidney</strong>,
+            <strong style="color:#FFABAB">red = Heart</strong>,
+            <strong style="color:#F1E365">yellow = Other</strong>.
+            Hover over any dot for study title, aim, and key finding.
           </p>
         </div>
         <table class="mini-table">
@@ -422,10 +393,10 @@
     </div>
   </section>
 
-  <!-- ── Chart 4: Design Heatmap ────────────────────────────────────────── -->
+  <!-- ── Chart 3: Design Heatmap ────────────────────────────────────────── -->
   <section class="chart-section" id="chart6">
     <div class="section-header">
-      <div class="section-number">4</div>
+      <div class="section-number">3</div>
       <h2>B-HOT Evidence Landscape</h2>
       <span class="purpose-tag">Evidence maturity &amp; translation stage</span>
     </div>
@@ -443,13 +414,14 @@
             individual studies it contains.
           </p>
           <p style="margin-top:0.6rem; font-size:0.82rem; color:var(--muted);">
-            <strong>Column tags:</strong> <em>BHOT</em> — study runs the B-HOT/BHOTX NanoString assay directly;
-            <em>COMP</em> — B-HOT genes used as reference in another assay;
-            <em>RET</em> — retrospective archival cohort;
-            <em>MC</em> — multicenter design supporting transportability;
-            <em>CLS</em> — classifier or clinical implementation work;
-            <em>MECH</em> — mechanistic immunobiology;
-            <em>MULTI</em> — multimodal profiling (mIF, spatial, IHC).
+            <strong>Design categories (columns):</strong>
+            <em>Retrospective</em> — archival cohort analysis;
+            <em>Multicenter</em> — evidence supporting transportability across sites;
+            <em>Classifier</em> — work developing diagnostic models or reporting frameworks;
+            <em>Comparative</em> — head-to-head comparison with another assay or method;
+            <em>Biomarker</em> — biomarker discovery or validation;
+            <em>In silico</em> — computational or re-analysis study;
+            <em>Mechanistic</em> — investigation of immune mechanisms or pathobiology.
           </p>
         </div>
 
@@ -463,8 +435,8 @@
      FOOTER
 ══════════════════════════════════════════════════════════════════════════ -->
 <footer>
-  <p>B-HOT Evidence Dashboard · Data sources: Full-Deduplicatedlocal3.3.xlsx &amp; Full-Deduplicatedlocal14.3.xlsx · Generated March 2026</p>
-  <p style="margin-top:0.3rem;">31 included studies · Filters: Use ≠ "Exclude from text" · Chart 4 uses Table 1 tags from 14.3 file</p>
+  <p>B-HOT Evidence Dashboard · Data source: Full-Deduplicatedlocal3.3.xlsx · Generated March 2026</p>
+  <p style="margin-top:0.3rem;">25 included studies · Filters: Use ≠ "Exclude from text"</p>
 </footer>
 
 <script>
